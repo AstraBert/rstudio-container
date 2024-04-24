@@ -2,7 +2,7 @@ FROM ghcr.io/lescai-teaching/bigdata-rstudio:1.4.0 as build
 
 FROM jupyter/r-notebook:ubuntu-22.04 as main
 
-COPY --from=build /usr/lib/ /usr/lib/
+COPY --from=build /usr/local/ /usr/local/
 
 USER root
 
